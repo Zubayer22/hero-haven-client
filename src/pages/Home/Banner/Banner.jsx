@@ -5,14 +5,14 @@ const Banner = () => {
     return (
         <div className="container mx-auto">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className='w-1/2'>
+                <div className='w-md-1/2 w-full'>
                     <img src={banner} className="w-full" />
                 </div>
 
-                <div className='w-1/2'>
-                    <h1 className="text-5xl font-bold">Box Office News!</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button className="btn btn-primary">Get Started</button>
+                <div className='w-md-1/2 w-full'>
+                    <h1 className="text-4xl font-bold">Discover Your Inner Hero at Hero Haven</h1>
+                    <p className="py-6">At Hero Haven, we bring together the thrilling world of action figures and collectibles to delight fans and collectors alike. Step into our virtual haven and immerse yourself in a universe filled with your favorite superheroes and iconic characters.</p>
+                    <button className="bg-gradient-to-r from-sky-500 to-sky-700 text-white px-6 py-3 rounded font-bold text-lg">Get Started</button>
                 </div>
             </div>
         </div>

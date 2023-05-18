@@ -25,7 +25,7 @@ const Header = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <Link to='/'><h1 className='text-3xl font-bold'>Hero Haven</h1></Link>
+                    <Link to='/'><h1 className='text-2xl font-bold'>Hero Haven</h1></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

@@ -1,0 +1,111 @@
+[
+      {
+        "name": "Iron Man",
+        "category": "Avengers",
+        "price": "$19.99",
+        "rating": 4.5,
+        "available_quantity": 10,
+        "description": "This Iron Man action figure is a must-have for any Avengers fan.",
+        "picture_url": "https://i.ibb.co/zStPs7R/523077c6-e3b2-4b7b-89d2-61a0ec7153b3-1-79452804fde4a20b7c5e72dc2abe4225.webp"
+      },
+      {
+        "name": "Captain America",
+        "category": "Avengers",
+        "price": "$24.99",
+        "rating": 4.2,
+        "available_quantity": 8,
+        "description": "Join the fight for justice with this Captain America action figure.",
+        "picture_url": "https://example.com/captainamerica.jpg"
+      },
+      {
+        "name": "Thor",
+        "category": "Avengers",
+        "price": "$21.99",
+        "rating": 4.7,
+        "available_quantity": 12,
+        "description": "Summon the power of thunder with this Thor action figure.",
+        "picture_url": "https://example.com/thor.jpg"
+      },
+      {
+        "name": "Hulk",
+        "category": "Avengers",
+        "price": "$29.99",
+        "rating": 4.9,
+        "available_quantity": 5,
+        "description": "Unleash the incredible strength of the Hulk with this action figure.",
+        "picture_url": "https://example.com/hulk.jpg"
+      },
+      {
+        "name": "Black Widow",
+        "category": "Avengers",
+        "price": "$18.99",
+        "rating": 4.3,
+        "available_quantity": 15,
+        "description": "Go undercover with the Black Widow action figure and take down the bad guys.",
+        "picture_url": "https://example.com/blackwidow.jpg"
+      },
+      {
+        "name": "Hawkeye",
+        "category": "Avengers",
+        "price": "$17.99",
+        "rating": 4.1,
+        "available_quantity": 7,
+        "description": "Aim true and fight alongside the Avengers with this Hawkeye action figure.",
+        "picture_url": "https://example.com/hawkeye.jpg"
+      },
+      {
+        "name": "Spider-Man",
+        "category": "Marvel",
+        "price": "$16.99",
+        "rating": 4.6,
+        "available_quantity": 11,
+        "description": "Swing into action with this Spider-Man action figure and protect New York City.",
+        "picture_url": "https://example.com/spiderman.jpg"
+      },
+      {
+        "name": "Wolverine",
+        "category": "Marvel",
+        "price": "$23.99",
+        "rating": 4.4,
+        "available_quantity": 9,
+        "description": "Unleash the ferocity of Wolverine with this action figure.",
+        "picture_url": "https://example.com/wolverine.jpg"
+      },
+      {
+        "name": "Deadpool",
+        "category": "Marvel",
+        "price": "$27.99",
+        "rating": 4.8,
+        "available_quantity": 6,
+        "description": "Break the fourth wall with this quirky Deadpool action figure.",
+        "picture_url": "https://example.com/deadpool.jpg"
+      },
+      {
+        "name": "Black Panther",
+        "category": "Marvel",
+        "price": "$25.99",
+        "rating": 4.7,
+        "available_quantity": 14,
+        "description": "Protect Wakanda with the Black Panther action figure, king of the jungle.",
+        "picture_url": "https://example.com/blackpanther.jpg"
+      },
+      {
+        "name": "Doctor Strange",
+        "category": "Marvel",
+        "price": "$22.99",
+        "rating": 4.6,
+        "available_quantity": 10,
+        "description": "Harness the mystical arts with this Doctor Strange action figure.",
+        "picture_url": "https://example.com/doctorstrange.jpg"
+      },
+      {
+        "name": "Ant-Man",
+        "category": "Marvel",
+        "price": "$19.99",
+        "rating": 4.3,
+        "available_quantity": 8,
+        "description": "Shrink down and join the fight with this Ant-Man action figure.",
+        "picture_url": "https://example.com/antman.jpg"
+      }
+      
+]  
