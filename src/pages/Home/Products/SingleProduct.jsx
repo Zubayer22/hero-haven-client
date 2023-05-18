@@ -25,7 +25,7 @@ const SingleProduct = ({ product }) => {
 
                 <div className="card-actions justify-between">
                     <p className='text-xl font-bold'>{price}</p>
-                    <button class="bg-gradient-to-r from-sky-500 to-sky-700 text-white px-6 py-3 rounded-full font-bold text-sm">View Details</button>
+                    <button className="bg-gradient-to-r from-sky-500 to-sky-700 text-white px-6 py-3 rounded-full font-bold text-sm">View Details</button>
                 </div>
             </div>
         </div>

@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
+
+    const {user, logOut} = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+        .then()
+        .catch(error => console.log(error))
+    }
+
     return (
         <div className='bg-sky-500'>
             <div className="navbar container mx-auto py-3 text-white">
@@ -34,7 +43,14 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className='btn bg-white border-none text-black px-8 py-2 hover:bg-white' to='/login'>Login</Link>
+                    {
+                        user 
+                        ? 
+                        <button onClick={handleLogOut} className='btn bg-white border-none text-black px-8 py-2 hover:bg-white'>Logut</button> 
+                        :
+                        <Link className='btn bg-white border-none text-black px-8 py-2 hover:bg-white' to='/login'>Login</Link>
+                    }
+                    
                 </div>
             </div>
         </div>
