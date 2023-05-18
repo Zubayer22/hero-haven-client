@@ -11,8 +11,8 @@ const Products = () => {
     },[])
 
     return (
-        <div className='container mx-auto'>
-            <h1 className="text-4xl font-bold text-center">Our Products</h1>
+        <div className='container mx-auto my-10'>
+            <h1 className="text-4xl font-bold text-center mb-10">Our Products</h1>
             <div className='grid grid-cols-3 gap-10'>
                 {
                     products.map(product => <SingleProduct product={product}></SingleProduct>)

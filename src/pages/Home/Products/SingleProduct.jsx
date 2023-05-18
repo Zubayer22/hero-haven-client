@@ -6,9 +6,9 @@ const SingleProduct = ({ product }) => {
     const { name, category, price, rating, available_quantity, description, picture_url } = product;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={picture_url} alt="Shoes" /></figure>
+            <figure><img src={picture_url} className='h-60' alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title">
+                <h2 className="card-title text-2xl">
                     {name}
                     {/* <div className="badge badge-secondary">NEW</div> */}
                 </h2>
@@ -24,7 +24,7 @@ const SingleProduct = ({ product }) => {
                 </div>
 
                 <div className="card-actions justify-between">
-                    <p className=' text-2xl font-bold'>{price}</p>
+                    <p className='text-xl font-bold'>{price}</p>
                     <button class="bg-gradient-to-r from-sky-500 to-sky-700 text-white px-6 py-3 rounded-full font-bold text-sm">View Details</button>
                 </div>
             </div>
