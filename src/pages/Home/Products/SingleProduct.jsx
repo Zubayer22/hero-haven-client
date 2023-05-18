@@ -23,7 +23,7 @@ const SingleProduct = ({ product }) => {
                     <p className='font-bold'>{rating}</p>
                 </div>
 
-                <div className="card-actions justify-between">
+                <div className="card-actions justify-between items-center">
                     <p className='text-xl font-bold'>{price}</p>
                     <button className="bg-gradient-to-r from-sky-500 to-sky-700 text-white px-6 py-3 rounded-full font-bold text-sm">View Details</button>
                 </div>

@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import login from '../../../assets/undraw_Mobile_login_re_9ntv.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 
 const SignUp = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, logOut} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -20,8 +22,17 @@ const SignUp = () => {
 
         createUser(email, password)
         .then(result => {
-            const user = result.user;
-            console.log(user);
+            const createdUser = result.user;
+            console.log(createdUser);
+
+            return updateProfile (createdUser,{
+                displayName: name,
+                photoURL: photo
+            });
+        })
+        .then(()=>{
+            logOut();
+            navigate('/login')
         })
         .catch(error => {
             console.log(error);

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import login from '../../../assets/undraw_Mobile_login_re_9ntv.png'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../../firebase/firebase.config';
@@ -8,6 +8,10 @@ import app from '../../../firebase/firebase.config';
 const Login = () => {
     const auth = getAuth(app);
     const {setUser, signIn} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = event => {
         event.preventDefault();
@@ -20,6 +24,7 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            navigate(from, { replace: true })
         })
         .catch(error => {
             console.log(error);
@@ -34,7 +39,7 @@ const Login = () => {
             const user = result.user;
             setUser(user);
             // console.log(user)
-            // navigate(from, { replace: true })
+            navigate(from, { replace: true })
         })
         .catch(error => {
             console.log('error', error.message)

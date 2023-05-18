@@ -4,11 +4,11 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
 
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const handleLogOut = () => {
         logOut()
-        .then()
-        .catch(error => console.log(error))
+            .then()
+            .catch(error => console.log(error))
     }
 
     return (
@@ -39,18 +39,25 @@ const Header = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/all-toys'>All Toys</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     {
-                        user 
-                        ? 
-                        <button onClick={handleLogOut} className='btn bg-white border-none text-black px-8 py-2 hover:bg-white'>Logut</button> 
-                        :
-                        <Link className='btn bg-white border-none text-black px-8 py-2 hover:bg-white' to='/login'>Login</Link>
+                        user
+                            ?
+                            <div className='flex items-center'>
+                                <button onClick={handleLogOut} className='btn bg-white border-none text-black px-8 py-2 hover:bg-white'>Logut</button>
+                                <div className='tooltip tooltip-bottom' data-tip={user?.displayName}>
+                                    <img src={user?.photoURL} className={user?.photoURL ? 'rounded-full w-10 ms-3' : ''} alt="" />
+                                </div>
+                            </div>
+
+                            :
+                            <Link className='btn bg-white border-none text-black px-8 py-2 hover:bg-white' to='/login'>Login</Link>
                     }
-                    
+
                 </div>
             </div>
         </div>
