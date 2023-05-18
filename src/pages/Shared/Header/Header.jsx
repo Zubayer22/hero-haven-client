@@ -34,7 +34,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Get started</a>
+                    <Link className='btn bg-white border-none text-black px-8 py-2 hover:bg-white' to='/login'>Login</Link>
                 </div>
             </div>
         </div>

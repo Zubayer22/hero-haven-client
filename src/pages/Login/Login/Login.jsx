@@ -22,13 +22,13 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="Enter your email" className="input input-bordered" />
+                            <input type="email" name='email' placeholder="Enter your email" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="Enter your password" className="input input-bordered" />
+                            <input type="password" name='password' placeholder="Enter your password" className="input input-bordered" />
                         </div>
                         <div className="form-control mt-6">
                             <button className="bg-gradient-to-r from-sky-500 to-sky-700 text-white px-6 py-3 rounded font-bold text-lg">Login</button>
