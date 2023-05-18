@@ -52,21 +52,21 @@ const Products = () => {
                 <TabPanel>
                     <div className='grid grid-cols-3 gap-10'>
                         {
-                            randomProducts.map(product => <SingleProduct key={product.id} product={product} />)
+                            randomProducts.map(product => <SingleProduct key={product._id} product={product} />)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div className='grid grid-cols-3 gap-10'>
                         {
-                            avengersProducts.map(product => <SingleProduct key={product.id} product={product} />)
+                            avengersProducts.map(product => <SingleProduct key={product._id} product={product} />)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div className='grid grid-cols-3 gap-10'>
                         {
-                            marvelProducts.map(product => <SingleProduct key={product.id} product={product} />)
+                            marvelProducts.map(product => <SingleProduct key={product._id} product={product} />)
                         }
                     </div>
                 </TabPanel>
