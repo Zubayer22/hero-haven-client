@@ -4,7 +4,7 @@ const Gallerys = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('https://hero-haven-server-nu.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -15,7 +15,7 @@ const Gallerys = () => {
            <h1 className="text-4xl font-bold text-center mb-8">Our Toy Gallery</h1>
             <div className='grid grid-cols-2 md:grid-cols-4'>
                 {
-                    products.map(product => <div className='shadow drop-shadow-xl m-4'><img className='w-full h-40 md:h-80 rounded' src={product.picture_url} alt="" /></div>
+                    products.map(product => <div key={product._id} className='shadow drop-shadow-xl m-4'><img className='w-full h-40 md:h-80 rounded' src={product.picture_url} alt="" /></div>
                     )
                 }
             </div>
@@ -38,7 +38,7 @@ export default Gallerys;
 //     const [productImages, setProductImages] = useState([]);
 
 //     useEffect(() => {
-//         fetch('http://localhost:3000/products')
+//         fetch('https://hero-haven-server-nu.vercel.app/products')
 //             .then(res => res.json())
 //             .then(data => {
 //                 setProductImages(data.map(product => ({
