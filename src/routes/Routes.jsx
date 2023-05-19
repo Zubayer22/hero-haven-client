@@ -6,6 +6,8 @@ import SignUp from "../pages/Login/SignUp/SignUp";
 import AllToys from "../pages/AllToys/AllToys";
 import Blogs from "../pages/Blogs/Blogs";
 import SingleToyDetails from "../pages/SingleToyDetails/SingleToyDetails";
+import MyToys from "../pages/MyToys/MyToys";
+import AddToy from "../pages/AddToy/AddToy";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +25,15 @@ const router = createBrowserRouter([
         {
             path:"/products/:id",
             element: <SingleToyDetails></SingleToyDetails>,
-            loader: ({params}) => fetch(`https://hero-haven-server-nu.vercel.app/products/${params.id}`)
+            loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
+        },
+        {
+            path: "/my-toys",
+            element: <MyToys></MyToys>
+        },
+        {
+            path: "/add-toy",
+            element: <AddToy></AddToy>
         },
         {
             path: "/blogs",

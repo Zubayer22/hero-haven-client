@@ -20,7 +20,7 @@ const SingleToyTable = ({ product }) => {
                 {category}
             </td>
             <td>
-                {price}
+                $ {price}
             </td>
             <td>
                 {available_quantity}
