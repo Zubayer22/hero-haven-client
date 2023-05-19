@@ -11,11 +11,11 @@ const Gallerys = () => {
             });
     }, []);
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto py-10'>
            <h1 className="text-4xl font-bold text-center mb-8">Our Toy Gallery</h1>
             <div className='grid grid-cols-2 md:grid-cols-4'>
                 {
-                    products.map(product => <div className='shadow drop-shadow-xl m-4'><img className='w-full h-80 rounded' src={product.picture_url} alt="" /></div>
+                    products.map(product => <div className='shadow drop-shadow-xl m-4'><img className='w-full h-40 md:h-80 rounded' src={product.picture_url} alt="" /></div>
                     )
                 }
             </div>

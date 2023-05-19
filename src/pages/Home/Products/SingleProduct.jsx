@@ -5,7 +5,7 @@ import { FaStar, FaStarHalf } from 'react-icons/fa';
 const SingleProduct = ({ product }) => {
     const { name, category, price, rating, available_quantity, description, picture_url } = product;
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-full bg-base-100 shadow-xl">
             <figure><img src={picture_url} className='h-60' alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-2xl">
