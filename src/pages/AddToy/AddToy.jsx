@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import Swal from 'sweetalert2'
 
 const AddToy = () => {
 
@@ -10,16 +11,39 @@ const AddToy = () => {
         const form = event.target;
         const seller_name = form.seller_name.value;
         const seller_email = form.seller_email.value;
-        const toy_name = form.toy_name.value;
+        const name = form.toy_name.value;
         const category = form.category.value;
-        const photo = form.photo.value;
+        const picture_url = form.photo.value;
         const price = form.price.value;
         const rating = form.rating.value;
-        const quantity = form.quantity.value;
+        const available_quantity = form.quantity.value;
         const description = form.description.value;
 
 
-        console.log(seller_email, seller_name, seller_email, toy_name, category, photo, price, rating, quantity, description);
+        const newToy = {seller_email, seller_name, seller_email, name, category, picture_url, price, rating, available_quantity, description};
+
+        console.log(seller_email, seller_name, seller_email, name, category, picture_url, price, rating, available_quantity, description);
+
+        //send data to server
+        fetch('http://localhost:3000/toy',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newToy)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Toy added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
     }
     return (
         <div className="container mx-auto my-10">
@@ -68,13 +92,13 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text">Price</span>
                                 </label>
-                                <input type="number" name='price' placeholder="Enter Toy Price" className="input input-bordered" required />
+                                <input type="number" name='price' placeholder="Enter Toy Price" className="input input-bordered" step="any" required />
                             </div>
                             <div className="form-control w-full md:w-1/2">
                                 <label className="label">
                                     <span className="label-text">Rating</span>
                                 </label>
-                                <input type="number" name='rating' placeholder="Give Rating" className="input input-bordered" min="0" max="5" required />
+                                <input type="number" name='rating' placeholder="Give Rating out of 5" className="input input-bordered" min="0" max="5" step="any" required />
                             </div>
                         </div>
 

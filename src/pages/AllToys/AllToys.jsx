@@ -25,7 +25,7 @@ const AllToys = () => {
                             <th>Toy Image</th>
                             <th>Category</th>
                             <th>Price</th>
-                            <th>Available Quantity</th>
+                            <th>Quantity</th>
                             <th>View Details </th>
                         </tr>
                     </thead>
