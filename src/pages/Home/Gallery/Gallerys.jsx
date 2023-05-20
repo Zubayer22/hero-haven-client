@@ -7,7 +7,7 @@ const Gallerys = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('https://hero-haven-server-zubayer22.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
@@ -42,7 +42,7 @@ export default Gallerys;
 //     const [productImages, setProductImages] = useState([]);
 
 //     useEffect(() => {
-//         fetch('http://localhost:3000/products')
+//         fetch('https://hero-haven-server-zubayer22.vercel.app/products')
 //             .then(res => res.json())
 //             .then(data => {
 //                 setProductImages(data.map(product => ({

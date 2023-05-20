@@ -25,7 +25,7 @@ const AddToy = () => {
         console.log(seller_email, seller_name, seller_email, name, category, picture_url, price, rating, available_quantity, description);
 
         //send data to server
-        fetch('http://localhost:3000/toy',{
+        fetch('https://hero-haven-server-zubayer22.vercel.app/toy',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -72,7 +72,7 @@ const AddToy = () => {
                                 <label className="label">
                                     <span className="label-text">Toy Name</span>
                                 </label>
-                                <input type="text" name='toy_name' placeholder="Enter your Name" className="input input-bordered" required />
+                                <input type="text" name='toy_name' placeholder="Enter Toy Name" className="input input-bordered" required />
                             </div>
                             <div className="form-control w-full md:w-1/2">
                                 <label className="label">

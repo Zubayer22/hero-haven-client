@@ -12,7 +12,7 @@ const MyToys = () => {
 
 
 
-    const url = `http://localhost:3000/products?email=${user?.email}`;
+    const url = `https://hero-haven-server-zubayer22.vercel.app/products?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -36,7 +36,7 @@ const MyToys = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:3000/products/${id}`, {
+                fetch(`https://hero-haven-server-zubayer22.vercel.app/products/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -58,7 +58,7 @@ const MyToys = () => {
 
     //update toy details
     // const handleUpdate = id => {
-    //     fetch(`http://localhost:3000/products/${id}`, {
+    //     fetch(`https://hero-haven-server-zubayer22.vercel.app/products/${id}`, {
     //         method: 'PATCH',
     //         headers: {
     //             'content-type': 'application/json'
@@ -84,7 +84,7 @@ const MyToys = () => {
     //     // Check if the toy is found
     //     if (updateToyDetails) {
 
-    //         fetch(`http://localhost:3000/products/${id}`, {
+    //         fetch(`https://hero-haven-server-zubayer22.vercel.app/products/${id}`, {
     //             method: 'PUT',
     //             headers: {
     //                 'content-type': 'application/json'
@@ -117,7 +117,7 @@ const MyToys = () => {
 
         // ...
 
-        fetch(`http://localhost:3000/products/${id}`, {
+        fetch(`https://hero-haven-server-zubayer22.vercel.app/products/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -11,7 +11,7 @@ const Products = () => {
     const [justiceProducts, setJusticeProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('https://hero-haven-server-zubayer22.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);

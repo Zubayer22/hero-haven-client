@@ -10,14 +10,14 @@ const AllToys = () => {
     const [searchText, setSearchText] = useState('');
 
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('https://hero-haven-server-zubayer22.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
 
     const handleSearch = () => {
-        fetch(`http://localhost:3000/products-search/${searchText}`)
+        fetch(`https://hero-haven-server-zubayer22.vercel.app/products-search/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data);

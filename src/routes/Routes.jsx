@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         {
             path:"/products/:id",
             element: <PrivateRoute><SingleToyDetails></SingleToyDetails></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:3000/products/${params.id}`)
+            loader: ({params}) => fetch(`https://hero-haven-server-zubayer22.vercel.app/products/${params.id}`)
         },
         {
             path: "/my-toys",
