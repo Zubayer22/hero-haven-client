@@ -9,7 +9,6 @@ const MyToys = () => {
     const [myToysList, setMyToysList] = useState([]);
 
 
-
     const url = `http://localhost:3000/products?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
@@ -18,7 +17,7 @@ const MyToys = () => {
                 setMyToysList(data);
                 console.log(data)
             })
-    }, [user?.email])
+    }, [user])
 
     //Delete any toy that
     const handleDelete = id => {

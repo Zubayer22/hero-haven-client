@@ -16,7 +16,7 @@ const SingleProduct = ({ product }) => {
                 <div className='flex items-center'>
                     <Rating
                         placeholderRating={rating}
-                        emptySymbol={<FaStarHalf className='text-[#F4C610]'></FaStarHalf>}
+                        emptySymbol={<FaStar className='text-[#b0b0b0]'></FaStar>}
                         placeholderSymbol={<FaStar className='text-[#F4C610]'></FaStar>}
                         fullSymbol={<FaStar className='text-[#F4C610]'></FaStar>}
                         readonly

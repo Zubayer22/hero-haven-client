@@ -8,6 +8,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     const [avengersProducts, setAvengersProducts] = useState([]);
     const [marvelProducts, setMarvelProducts] = useState([]);
+    const [justiceProducts, setJusticeProducts] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:3000/products')
@@ -21,8 +22,10 @@ const Products = () => {
     const filterProductsByCategory = (data) => {
         const avengers = data.filter(product => product.category === 'Avengers');
         const marvel = data.filter(product => product.category === 'Marvel');
+        const justiceLeague = data.filter(product => product.category === 'Justice League');
         setAvengersProducts(avengers);
         setMarvelProducts(marvel);
+        setJusticeProducts(justiceLeague);
     };
 
 
@@ -47,6 +50,7 @@ const Products = () => {
                     <Tab>All Toys</Tab>
                     <Tab>Avengers Toys</Tab>
                     <Tab>Marvel Toys</Tab>
+                    <Tab>Justice League</Tab>
                 </TabList>
 
                 <TabPanel>
@@ -67,6 +71,13 @@ const Products = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                         {
                             marvelProducts.map(product => <SingleProduct key={product._id} product={product} />)
+                        }
+                    </div>
+                </TabPanel>
+                <TabPanel>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                        {
+                            justiceProducts.map(product => <SingleProduct key={product._id} product={product} />)
                         }
                     </div>
                 </TabPanel>
