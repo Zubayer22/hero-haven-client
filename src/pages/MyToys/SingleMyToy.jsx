@@ -63,13 +63,13 @@ const SingleMyToy = ({ myToy, handleDelete, handleUpdate }) => {
                                     <label className="label">
                                         <span className="label-text">Your Name</span>
                                     </label>
-                                    <input type="text" name='seller_name' placeholder="Enter your Name" className="input input-bordered" defaultValue={user?.displayName} required />
+                                    <input type="text" name='seller_name' placeholder="Enter your Name" className="input input-bordered" defaultValue={user?.displayName} disabled/>
                                 </div>
                                 <div className="form-control w-full md:w-1/2">
                                     <label className="label">
                                         <span className="label-text">Your Email</span>
                                     </label>
-                                    <input type="email" name='seller_email' placeholder="Enter your email" className="input input-bordered" defaultValue={user?.email} required />
+                                    <input type="email" name='seller_email' placeholder="Enter your email" className="input input-bordered" defaultValue={user?.email} disabled />
                                 </div>
                             </div>
 
