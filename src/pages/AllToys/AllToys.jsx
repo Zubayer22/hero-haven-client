@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import SingleProduct from '../Home/Products/SingleProduct';
 import SingleToyTable from './SingleToyTable';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
-
+    useTitle('All Toys');
 
     const [products, setProducts] = useState([]);
 

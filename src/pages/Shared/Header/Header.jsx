@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import logo from '../../../assets/logo.png'
 
 const Header = () => {
 
@@ -36,7 +37,7 @@ const Header = () => {
                             <li><Link to='/blogs'>Blogs</Link></li>
                         </ul>
                     </div>
-                    <Link to='/'><h1 className='text-2xl font-bold'>Hero Haven</h1></Link>
+                    <Link to='/'><img src={logo} className='w-full md:w-1/2' alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

@@ -3,10 +3,11 @@ import login from '../../../assets/undraw_Mobile_login_re_9ntv.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { updateProfile } from 'firebase/auth';
+import useTitle from '../../../hooks/useTitle';
 
 
 const SignUp = () => {
-
+    useTitle('Sign Up');
     const {createUser, logOut} = useContext(AuthContext);
     const navigate = useNavigate();
 

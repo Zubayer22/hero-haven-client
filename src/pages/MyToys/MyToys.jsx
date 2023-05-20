@@ -2,9 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import SingleMyToy from './SingleMyToy';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
-
+    useTitle('My Toys');
     const { user } = useContext(AuthContext);
     const [myToysList, setMyToysList] = useState([]);
     const [filterOption, setFilterOption] = useState(''); // Default filter option is empty

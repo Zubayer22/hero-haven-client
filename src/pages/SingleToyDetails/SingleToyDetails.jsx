@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Rating from 'react-rating';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
+import useTitle from '../../hooks/useTitle';
 
 const SingleToyDetails = () => {
 
@@ -10,6 +11,7 @@ const SingleToyDetails = () => {
 
     const { _id, name, category, seller_name, seller_email, price, rating, available_quantity, description, picture_url } = singleToy;
 
+    useTitle('Toy Details');
 
     useEffect(() => {
         window.scrollTo(0, 0);
