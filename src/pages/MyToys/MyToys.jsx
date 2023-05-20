@@ -7,6 +7,9 @@ const MyToys = () => {
 
     const { user } = useContext(AuthContext);
     const [myToysList, setMyToysList] = useState([]);
+    const [filterOption, setFilterOption] = useState(''); // Default filter option is empty
+    const [filteredToys, setFilteredToys] = useState([]); // State variable to store the filtered toys
+
 
 
     const url = `http://localhost:3000/products?email=${user?.email}`;
@@ -142,11 +145,40 @@ const MyToys = () => {
     };
 
 
+    const handleFilterByPrice = (option) => {
+        setFilterOption(option); // Update the filter option state
+
+        // Perform filtering based on the selected option
+        switch (option) {
+            case 'ascending':
+                const ascendingToys = [...myToysList].sort((a, b) => a.price - b.price);
+                setFilteredToys(ascendingToys);
+                break;
+            case 'descending':
+                const descendingToys = [...myToysList].sort((a, b) => b.price - a.price);
+                setFilteredToys(descendingToys);
+                break;
+            default:
+                setFilteredToys([]); // If the filter option is empty, clear the filtered list
+                break;
+        }
+    };
+
 
     return (
         <div>
             <div className='container mx-auto py-10'>
                 <h1 className="text-4xl font-bold text-center mb-10">My Toys</h1>
+
+                <div className="dropdown dropdown-hover mb-10">
+                    <label tabIndex={0} className="btn m-1">Filter With Price</label>
+                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a onClick={() => handleFilterByPrice('descending')}>Descending</a></li>
+                        <li><a onClick={() => handleFilterByPrice('ascending')}>Ascending</a></li>
+                        <li><a onClick={() => handleFilterByPrice('')}>Clear Filter</a></li> {/* Add a clear filter option */}
+                    </ul>
+                </div>
+
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
                         {/* head */}
@@ -163,8 +195,13 @@ const MyToys = () => {
                         </thead>
                         <tbody>
 
-                            {
+                            {/* {
                                 myToysList.map(myToy => <SingleMyToy key={myToy._id} myToy={myToy} handleDelete={handleDelete} handleUpdate={handleUpdate}></SingleMyToy>)
+                            } */}
+                            {
+                                (filteredToys.length > 0 ? filteredToys : myToysList).map(myToy => (
+                                    <SingleMyToy key={myToy._id} myToy={myToy} handleDelete={handleDelete} handleUpdate={handleUpdate} />
+                                ))
                             }
 
                         </tbody>
