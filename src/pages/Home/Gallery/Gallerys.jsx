@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 
 const Gallerys = () => {
-    AOS.init();
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -14,7 +12,7 @@ const Gallerys = () => {
             });
     }, []);
     return (
-        <div data-aos="fade-down" className='container mx-auto py-10'>
+        <div className='container mx-auto py-10'>
            <h1 className="text-4xl font-bold text-center mb-8">Our Toy Gallery</h1>
             <div className='grid grid-cols-2 md:grid-cols-4'>
                 {

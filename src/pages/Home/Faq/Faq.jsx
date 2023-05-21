@@ -1,17 +1,20 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const Faq = () => {
+    AOS.init();
     return (
         <div className='py-10'>
             <h1 className="text-4xl font-bold text-center mb-8">Faq's</h1>
             <div className="hero">
 
                 <div className="hero-content flex-col lg:flex-row">
-                    <div className='w-md-1/2 w-full'>
+                    <div className='w-md-1/2 w-full' data-aos="fade-left" data-aos-duration="1000">
                         <img src="https://i.ibb.co/Jj0dJLK/undraw-Questions-re-1fy7.png" className="w-full" />
                     </div>
 
-                    <div className='w-md-1/2 w-full'>
+                    <div className='w-md-1/2 w-full' data-aos="fade-right" data-aos-duration="1000">
                         <div className="collapse collapse-plus">
                             <input type="checkbox" className="peer" />
                             <div className="collapse-title bg-[#0ba5e9] text-primary-content peer-checked:bg-[#0ba5e9] peer-checked:text-secondary-content">

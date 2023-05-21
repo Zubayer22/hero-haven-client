@@ -31,7 +31,7 @@ const Reviews = () => {
                 className="mySwiper"
                 breakpoints={{
                     // Define responsive settings for different screen sizes
-                    320: {
+                    280: {
                       slidesPerView: 1,
                       spaceBetween: 20,
                     },
